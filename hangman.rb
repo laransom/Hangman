@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'pry'
 chances = 12
 word = ''
 guess = ''
@@ -19,7 +18,7 @@ while chances > 0
   print "Guess a single letter (a-z) or the entire word: "
   guess = gets.chomp.downcase
   until /^[a-z]+$/.match(guess)
-    print "Please entire a letter valid letter (a-z) or word: "
+    print "Please enter a valid letter (a-z) or word: "
     guess = gets.chomp.downcase
   end
   if guess.length > 1
